@@ -156,23 +156,3 @@ class SentimentAnalysis:
             os.remove(strFile)  # Opt.: os.system("rm "+strFile)
         plt.savefig(strFile)
         plt.show()
-
-
-# @second.route('/sentiment_logic', methods=['POST', 'GET'])
-# def sentiment_logic():
-#     keyword = request.form.get('keyword')
-#     number_of_tweets = int(request.form.get('number_of_tweets'))
-#     sa = SentimentAnalysis()
-#     polarity, htmlpolarity, positive, \
-#     wpositive, spositive, negative, wnegative, \
-#     snegative, neutral, keyword1, tweet1 = sa.DownloadData(keyword, number_of_tweets)
-#
-#     return render_template('sentiment_analyzer.html', polarity=polarity, htmlpolarity=htmlpolarity, positive=positive,
-#                            wpositive=wpositive, spositive=spositive,
-#                            negative=negative, wnegative=wnegative, snegative=snegative, neutral=neutral,
-#                            keyword=keyword1, tweets=tweet1)
-#
-#
-# @second.route('/visualize')
-# def visualize():
-#     return render_template('PieChart.html')
